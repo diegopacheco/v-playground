@@ -1,4 +1,5 @@
 module main
+import datatypes
 
 fn main() {
   mut mapa := map[string]int{}
@@ -10,7 +11,10 @@ fn main() {
   m['one'] = 1
   m['two'] = 2
   println(m['one']) // "1"
-  println(m['bad_key']) // "0"
+  println(m['bad_key']) // "[]"
+
+  map_list := map[string]datatypes.LinkedList[string]{}
+  println(map_list['bad_key'])
 
   arr := [1, 2, 3]
   large_index := 999
