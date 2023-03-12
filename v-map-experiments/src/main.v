@@ -11,6 +11,11 @@ fn main() {
   m['two'] = 2
   println(m['one']) // "1"
   println(m['bad_key']) // "0"
+
+  arr := [1, 2, 3]
+  large_index := 999
+  val := arr[large_index] or { panic('out of bounds') }
+  println(val)
 }
 
 fn check(mapa map[string]int) {
