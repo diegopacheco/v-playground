@@ -14,7 +14,12 @@ fn main() {
   println(m['bad_key']) // "[]"
 
   map_list := map[string]datatypes.LinkedList[string]{}
-  println(map_list['bad_key'])
+  println("bad_key value is: ${map_list['bad_key']}")
+  if v := map_list['bad_key'] { 
+    println('yeah got the key: bad_key value: ${v}') 
+  }else{
+    println('key: bad_key not found ') 
+  }
 
   arr := [1, 2, 3]
   large_index := 999
