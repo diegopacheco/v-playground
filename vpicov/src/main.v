@@ -2,9 +2,9 @@ module main
 
 import picoev
 import picohttpparser
-import net.http
 
 fn main() {
+	println("Pico.v running on http://127.0.0.1:8080/")
 	mut server := picoev.new(picoev.Config{
 		cb: handle_request
 	})
